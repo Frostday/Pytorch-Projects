@@ -33,8 +33,8 @@ for i in range(n_games):
 
     print(f'episode {i+1}: ' 'score=%.2f' % score, 'average_score=%.2f' % avg_score, 'epsilon=%.2f' % agent.epsilon)
 
-    # T.save(agent.Q_eval.state_dict(), 'DQL-Basics/model.pt')
+    T.save(agent.Q_eval.state_dict(), 'DQL-Basic/model.pt')
 
 x = [i+1 for i in range(n_games)]
-filename = 'DQL-Basics/lunar_lander.png'
+filename = 'DQL-Basic/lunar_lander.png'
 plot_learning_curve(x, scores, eps_history, filename)
